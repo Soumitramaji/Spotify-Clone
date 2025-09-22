@@ -28,7 +28,7 @@ async function getSongs(folder) {
     // Default artist
     let artist = "Unknown Artist";
 
-    // Try to load artist info from info.json
+    // Load artist info from info.json
     try {
         let res = await fetch(`${currFolder}/info.json`);
         if (res.ok) {
@@ -89,8 +89,6 @@ async function getSongs(folder) {
     return songs;
 }
 
-
-
 const playMusic = (track, pause = false) => {
     currentSongIndex = songs.findIndex(s => s === track || decodeURIComponent(s) === track);
 
@@ -108,26 +106,24 @@ const playMusic = (track, pause = false) => {
         displayName = displayName.slice(0, -4);
     }
 
-        document.querySelector(".songinfo").innerHTML = displayName;
+    document.querySelector(".songinfo").innerHTML = displayName;
     document.querySelector(".songtime").innerHTML = "00:00 / 00:00";
 
-// Highlight current song in list
-document.querySelectorAll(".songlist ul li").forEach(li => li.classList.remove("playing"));
+    // Highlight current song
+    document.querySelectorAll(".songlist ul li").forEach(li => li.classList.remove("playing"));
 
-const songItems = document.querySelectorAll(".songlist ul li");
+    const songItems = document.querySelectorAll(".songlist ul li");
 
-// Highlight the correct one
-if (songItems[currentSongIndex]) {
-    songItems[currentSongIndex].classList.add("playing");
-    console.log("Highlighted:", songItems[currentSongIndex].querySelector(".info").innerText);
+    // Highlight the correct one
+    if (songItems[currentSongIndex]) {
+        songItems[currentSongIndex].classList.add("playing");
     // Auto-scroll into view
-    songItems[currentSongIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-} else {
-    console.warn("No matching <li> to highlight at index", currentSongIndex);
-}
+        songItems[currentSongIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+        console.warn("No matching <li> to highlight at index", currentSongIndex);
+    }
 
 };
-
 
 
 async function displayAlbums() {
@@ -144,7 +140,7 @@ async function displayAlbums() {
         // Decode and normalize the link
         const decodedHref = decodeURIComponent(anchor.getAttribute("href")).replace(/\\/g, "/");
 
-        // Match only folders directly under /songs/
+        // Match only folders directly under songs
         const match = decodedHref.match(/\/songs\/([^\/]+)\//);
         if (!match) continue; // Skip if it doesn't match expected structure
 
@@ -194,7 +190,7 @@ async function main() {
 
     await displayAlbums()
 
-    // attach an event listener to play,next and previous
+    // attach an event listener to play
 
     play.addEventListener("click", () => {
         if (currentSong.paused) {
@@ -215,6 +211,7 @@ async function main() {
     })
 
     //  Auto play next song when current ends
+    
     currentSong.addEventListener("ended", () => {
         if (currentSongIndex < songs.length - 1) {
             currentSongIndex += 1;
@@ -244,7 +241,7 @@ async function main() {
         document.querySelector(".left").style.left = "-120%"
     })
 
-    // add an event listener to previous and next
+    // add an event listener to next and previous
 
     next.addEventListener("click", () => {
         currentSong.pause();
@@ -257,8 +254,6 @@ async function main() {
         currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
         playMusic(songs[currentSongIndex]);
     });
-
-
 
     // add an event listener to volume
 

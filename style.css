@@ -28,7 +28,6 @@ body {
 
 .header {
     display: flex;
-    /* background-color: red; */
     height: 60px;
     justify-content: space-between;
 }
@@ -305,6 +304,7 @@ body {
 .close {
     display: none;
 }
+
 /* Highlight the currently playing song */
 .songlist ul li.playing {
     background-color: #1db954;
@@ -383,87 +383,87 @@ body {
     }
 
 }
+
 @media (max-width: 450px) {
-  body {
-    font-size: 14px;
-  }
+    body {
+        font-size: 14px;
+    }
 
-  .left {
-    width: 100vw;
-  }
+    .left {
+        width: 100vw;
+    }
 
-  .header ul {
-    gap: 20px;
-  }
+    .header ul {
+        gap: 20px;
+    }
 
-  .card {
-    width: 90vw;
-  }
+    .card {
+        width: 90vw;
+    }
 
-  .card img {
-    height: auto;
-    max-height: 180px;
-    object-fit: cover;
-  }
+    .card img {
+        height: auto;
+        max-height: 180px;
+        object-fit: cover;
+    }
 
-  .playbar {
-    flex-direction: column;
-    align-items: center;
-    width: 95vw;
-    padding: 12px;
-    bottom: 20px;
-  }
+    .playbar {
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+        padding: 12px;
+        bottom: 20px;
+    }
 
-  .album-art {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-  }
+    .album-art {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
 
-  .songinfo {
-    text-align: center;
-    width: auto;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
+    .songinfo {
+        text-align: center;
+        width: auto;
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
 
-  .songtime {
-    font-size: 13px;
-    margin-bottom: 8px;
-  }
+    .songtime {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
 
-  .seekbar {
-    width: 90%;
-  }
+    .seekbar {
+        width: 90%;
+    }
 
-  .songbuttons img {
-    width: 28px;
-    height: 28px;
-  }
+    .songbuttons img {
+        width: 28px;
+        height: 28px;
+    }
 
-  .volume {
-    flex-direction: row;
-    gap: 8px;
-  }
+    .volume {
+        flex-direction: row;
+        gap: 8px;
+    }
 
-  .buttons {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .cardContainer {
-    padding: 0 10px;
-    justify-content: center;
-  }
+    .cardContainer {
+        padding: 0 10px;
+        justify-content: center;
+    }
 
-  .songlist ul li {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    .songlist ul li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .songlist .info {
-    width: auto;
-  }
+    .songlist .info {
+        width: auto;
+    }
 }
-
