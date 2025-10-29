@@ -14,6 +14,15 @@ A dynamic, front-end web application replicating core Spotify features using HTM
 - Highlight currently playing song.
 - Clean, modern UI inspired by Spotify.
 
+
+ 🎨 Technologies Used
+
+- HTML5 – Structure of the page
+- CSS3 – Styling and responsive design
+- JavaScript – Interactive behavior (play buttons, sidebar toggle)
+- Google Fonts (Roboto) – Modern font style
+
+
 🚀 Getting Started -
 
 1. Clone the repository
