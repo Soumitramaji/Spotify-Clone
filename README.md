@@ -26,7 +26,7 @@ A dynamic, front-end web application replicating core Spotify features using HTM
 🚀 Getting Started -
 
 1. Clone the repository
-git clone (https://github.com/Soumitramaji/BitTree-Store-Link.git)
+git clone (https://github.com/Soumitramaji/Spotify-Clone.git)
 
 2. open "index.html"
  
