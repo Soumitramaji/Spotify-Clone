@@ -1,5 +1,9 @@
 {
-    "title": "Best of KK songs",
-    "description": "KK Hits!",
-    "artist": "KK"
+  "title": "Best of KK songs",
+  "description": "KK Hits!",
+  "artist": "KK",
+  "songs": [
+    "Dil Kyun Yeh Mera (Kites).mp3",
+    "Pal (Live).mp3"
+  ]
 }

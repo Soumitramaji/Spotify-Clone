@@ -1,5 +1,9 @@
 {
-    "title": "Best of Honey Singh songs",
-    "description": "Honey Singh Hits!",
-    "artist": "Honey Singh"
+  "title": "Best of Honey Singh songs",
+  "description": "Honey Singh Hits!",
+  "artist": "Honey Singh",
+  "songs": [
+    "Brown Rang (INTERNATIONAL VILLAGER).mp3",
+    "High Heels Ft. Jaz Dhami.mp3"
+  ]
 }

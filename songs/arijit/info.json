@@ -1,5 +1,9 @@
 {
-    "title": "Best of Arijit Singh songs",
-    "description": "Arijit Singh Hits!",
-    "artist": "Arijit Singh"
+  "title": "Best of Arijit Singh",
+  "description": "Arijit Singh Hits!",
+  "artist": "Arijit Singh",
+  "songs": [
+    "Aasan Nahin Yahan - Auditore.mp3",
+    "Chahun Main Ya Naa - Auditore.mp3"
+  ]
 }

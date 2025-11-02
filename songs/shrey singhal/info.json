@@ -1,5 +1,9 @@
 {
-    "title": "Best of Shrey Singhal songs",
-    "description": "Shrey Singhal Hits!",
-    "artist": "Shrey Singhal"
+  "title": "Best of Shrey Singhal songs",
+  "description": "Shrey Singhal Hits!",
+  "artist": "Shrey Singhal",
+  "songs": [
+    "Shukrana-Shrey Singhal.mp3",
+    "Teri Yaadein-Shrey Singhal.mp3"
+  ]
 }

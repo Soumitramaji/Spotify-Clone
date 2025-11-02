@@ -18,52 +18,26 @@ function secondsToMinutesSeconds(seconds) {
 
 async function getSongs(folder) {
     currFolder = folder.replace(/\/+$/, "");
-    let a = await fetch(`${folder}/`);   // 🔧 CHANGED: removed 127.0.0.1:3000
-    let response = await a.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
     songs = [];
 
-    // Default artist
     let artist = "Unknown Artist";
 
-    // Load artist info from info.json
     try {
-        let res = await fetch(`${currFolder}/info.json`);  // 🔧 CHANGED
+        let res = await fetch(`${currFolder}/info.json`);
         if (res.ok) {
             let info = await res.json();
             if (info.artist) artist = info.artist;
+            if (Array.isArray(info.songs)) songs = info.songs;
         }
     } catch (e) {
         console.warn("No info.json found in", currFolder);
     }
 
-    // Collect songs
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.toLowerCase().endsWith(".mp3")) {
-            const url = new URL(element.href);
-            const fileName = decodeURIComponent(url.pathname.split("/").pop());
-            songs.push(fileName);
-        }
-    }
-
-    // Update UI
     let songUL = document.querySelector(".songlist ul");
     songUL.innerHTML = "";
 
     for (const song of songs) {
-        let displayName = decodeURIComponent(song);
-
-        // Remove slashes or backslashes
-        displayName = displayName.split("/").pop().split("\\").pop();
-
-        // Remove .mp3 for display only
-        if (displayName.toLowerCase().endsWith(".mp3")) {
-            displayName = displayName.slice(0, -4);
-        }
-
+        let displayName = decodeURIComponent(song.replace(/\.mp3$/i, ""));
         songUL.innerHTML += `
             <li data-filename="${song}">
                 <img class="invert" src="music.svg" alt="">
@@ -78,16 +52,16 @@ async function getSongs(folder) {
             </li>`;
     }
 
-    // Attach click listeners
     Array.from(songUL.getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", () => {
-            const actualFilename = e.dataset.filename;
-            playMusic(actualFilename);
+            playMusic(e.dataset.filename);
         });
     });
 
     return songs;
 }
+
+
 
 const playMusic = (track, pause = false) => {
     currentSongIndex = songs.findIndex(s => s === track || decodeURIComponent(s) === track);

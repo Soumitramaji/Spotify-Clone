@@ -1,5 +1,9 @@
 {
-    "title": "Best of Eminem songs",
-    "description": "Eminem Hits!",
-    "artist": "Eminem"
+  "title": "Best of Eminem songs",
+  "description": "Eminem Hits!",
+  "artist": "Eminem",
+  "songs": [
+    "Without Me.mp3",
+    "Love the Way You Lie (feat. Rihanna).mp3"
+  ]
 }
