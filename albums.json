@@ -1,0 +1,68 @@
+[
+  {
+    "folder": "arijit",
+    "title": "Best of Arijit Singh",
+    "description": "Arijit Singh Hits!",
+    "artist": "Arijit Singh",
+    "cover": "songs/arijit/cover.jpg",
+    "songs": [
+      "Aasan Nahin Yahan - Auditore.mp3",
+      "Chahun Main Ya Naa - Auditore.mp3"
+    ]
+  },
+  {
+    "folder": "atif aslam",
+    "title": "Best of Atif Aslam",
+    "description": "Atif Aslam Hits!",
+    "artist": "Atif Aslam",
+    "cover": "songs/atif aslam/cover.jpg",
+    "songs": [
+      "Aadat (Movie Version).mp3",
+      "Tere Liye.mp3"
+    ]
+  },
+  {
+    "folder": "eminem",
+    "title": "Best of Eminem songs",
+    "description": "Eminem Hits!",
+    "artist": "Eminem",
+    "cover": "songs/eminem/cover.jpg",
+    "songs": [
+      "Without me.mp3",
+      "Love the Way You Lie (feat. Rihanna).mp3"
+    ]
+  },
+  {
+    "folder": "honey singh",
+    "title": "Best of Honey Singh songs",
+    "description": "Honey Singh Hits!",
+    "artist": "Honey Singh",
+    "cover": "songs/honey singh/cover.jpg",
+    "songs": [
+      "Brown Rang (INTERNATIONAL VILLAGER).mp3",
+      "High Heels Ft. Jaz Dhami.mp3"
+    ]
+  },
+  {
+    "folder": "kk",
+    "title": "Best of KK songs",
+    "description": "KK Hits!",
+    "artist": "KK",
+    "cover": "songs/kk/cover.jpg",
+    "songs": [
+      "Dil Kyun Yeh Mera (Kites).mp3",
+      "Pal (Live).mp3"
+    ]
+  },
+  {
+    "folder": "shrey singhal",
+    "title": "Best of Shrey Singhal songs",
+    "description": "Shrey Singhal Hits!",
+    "artist": "Shrey Singhal",
+    "cover": "songs/shrey singhal/cover.jpg",
+    "songs": [
+      "Shukrana-Shrey Singhal.mp3",
+      "Teri Yaadein-Shrey Singhal.mp3"
+    ]
+  }
+]
